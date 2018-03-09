@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Cadastro em HTML</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body onload="init()">
+    <div class="container">
+        <header>
+            <h1>Cadastro de contatos</h1>
+        </header>
+        <!-- "Menu" -->
+        <div class="menu">
+            <div class="opcoes">
+                <p>
+                    <a href="#modal" class="textIcons" id="incluirNovo">
+                        <i class="fas fa-plus-square spaceIcon"></i>Incluir Novo</a>
+                </p>
+            </div>
+            <div class="searchArea">
+                <input type="text" name="search" id="text-search" placeholder="Digite no mínimo 3 letras para pesquisa">
+                <a href="#" class="btn-search">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Modal -->
+        <section>
+            <div id="modal">
+                <div class="modal-content">
+                    <div class="header-form">
+                        <h2>Preencha os dados abaixo:</h2>
+                    </div>
+                    <div class="form-cadastro">
+                        <form id="cadastro" name="cadastro" onsubmit="return false;">
+                            <fieldset>
+                                <label for="firstname">
+                                    <span>Primeiro Nome</span>
+                                </label>
+                                <input type="text" placeholder="Insira seu primeiro nome" id="firstname">
+                            </fieldset>
+                            <fieldset>
+                                <label for="lastname">Sobrenome</label>
+                                <input type="text" placeholder="insira seu sobrenome" id="lastname">
+                            </fieldset>
+                            <fieldset>
+                                <label for="cpf">CPF</label>
+                                <input type="text" placeholder="Número do CPF" id="cpf">
+                            </fieldset>
+                            <fieldset>
+                                <label for="subject">Qual sua solicitação</label>
+                                <select id="subject">
+                                    <option value="Contato">Contato</option>
+                                    <option value="Sugestão">Sugestão</option>
+                                    <option value="Opinião">Opinião</option>
+                                    <option value="Elogio">Elogio</option>
+                                    <option value="Critica">Critica</option>
+                                </select>
+                            </fieldset>
+                            <fieldset>
+                                <label for="submit"> </label>
+                                <button id="submit" onclick="onSave();">Registrar</button>
+                                <button id="clear" onclick="onClear()" class="limpar">Limpar</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="footer-form">
+                        <a href="#" class="textIcons">
+                            <i class="fas fa-times spaceIcon"></i>Fechar</a>
+                    </div>
+                </div>
+                <div id="overlay"></div>
+            </div>
+        </section>
+        <!-- Tabela de Registros -->
+        <section>
+           
+            <table id="regtable">
+                <thead>
+                    <tr>
+                        <td>
+                            <div id='qtdRegistros'></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Primeiro nome</th>
+                        <th>Sobrenome</th>
+                        <th>CPF</th>
+                        <th>Tipo de telefone</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="rows">
+                </tbody>
+            </table>
+        </section>
+        <!-- Footer -->
+        <footer></footer>
+
+    </div>
+    <!-- Scripts -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

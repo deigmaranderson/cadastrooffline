@@ -1,0 +1,184 @@
+/**
+ * Estilos para formulário de cadastro offline
+ * @author Deigmar Anderson <deigmar@gmail.com>
+ * @version 1.0
+ */
+body {
+    font-family: 'Arial';
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+header {
+    background-color: #00cccc;
+    margin: 0;
+    padding: 10px 40px;
+    color: #fff;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #00cccc;
+    height: 20px;
+}
+table,
+.menu {
+    margin: 25px auto;
+    border-collapse: collapse;
+    border: 1px solid #eee;
+    border-bottom: 2px solid #00cccc;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.10),
+    0px 10px 20px rgba(0, 0, 0, 0.05),
+    0px 20px 20px rgba(0, 0, 0, 0.05),
+    0px 30px 20px rgba(0, 0, 0, 0.05);
+}
+td {
+    color: #555;
+}
+tr:hover {
+    background: #f4f4f4;
+}
+td:hover {
+    color: #555;
+}
+th,
+td {
+    color: #999;
+    border: 1px solid #eee;
+    padding: 12px 35px;
+    border-collapse: collapse;
+}
+th {
+    background: #00cccc;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+th:last {
+    border-right: none;
+}
+button,
+button.del,
+button.limpar {
+    background-color: #00cccc;
+    border: none;
+    color: #ffffff;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 130px;
+}
+button.del {
+    background-color: #f0172d;
+}
+button.limpar {
+    background-color: #af9673;
+}
+
+/**
+Modal
+**/
+#modal {
+    left: 50%;
+    margin: -250px 0 0 -40%;
+    opacity: 0;
+    position: absolute;
+    top: -50%;
+    visibility: hidden;
+    width: 80%;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, .25);
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+#modal:target {
+    opacity: 1;
+    top: 50%;
+    visibility: visible;
+}
+#modal h2 {
+    margin: 0;
+}
+#modal .btn {
+    float: right;
+}
+#modal .copy,
+#modal .header-form,
+#modal .footer-form {
+    padding: 15px;
+    margin-top: -20px;
+}
+.modal-content {
+    background: #f7f7f7;
+    position: relative;
+    z-index: 20;
+    border-radius: 5px;
+}
+#modal .copy {
+    background: #fff;
+}
+#modal #overlay {
+    background-color: #000;
+    background: rgba(0, 0, 0, .5);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+fieldset {
+    border: none;
+    padding: 15px 40px 0 40px;
+}
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+.header h2 {
+    color: #333;
+}
+.footer {
+    padding-bottom: 20px;
+}
+.textIcons {
+    color: #333;
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+}
+.spaceIcon {
+    margin-right: 5px;
+}
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    margin-top: 0;
+}
+.searchArea {
+    margin: 0 20px;
+    width: 300px;
+}
+.btn-search {
+    position: absolute;
+    margin: -45px 300px 0 275px;
+    color: #d0d0d0;
+}
